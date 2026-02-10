@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 //how we will create this code via js in react
 /* <div class="parent">
@@ -39,7 +41,7 @@ const heading = document.createElement('h1');
 
 
 
-    const head = React.createElement("h1",{class:"parent"},React.createElement("div",{class:"child"},[React.createElement("h1",{class:"headin1"},"i am heading1"),React.createElement("h2",{class:"headin2"},"i am heading2")]));
+    const head = React.createElement("h1",{className:"parent"},React.createElement("div",{className:"child"},[React.createElement("h1",{className:"headin1"},"i am heading1"),React.createElement("h2",{className:"headin2"},"i am heading2")]));
     const root1 = ReactDOM.createRoot(document.getElementById('root1'));
     root1.render(head);
     8076966551
