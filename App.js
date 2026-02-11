@@ -40,8 +40,39 @@ const heading = document.createElement('h1');
 
 
 
-
+    //React.createElement ==> ReactElement (js-object ) ==> HTMLelement (browser understand)(render)
     const head = React.createElement("h1",{className:"parent"},React.createElement("div",{className:"child"},[React.createElement("h1",{className:"headin1"},"i am heading1"),React.createElement("h2",{className:"headin2"},"i am heading2")]));
     const root1 = ReactDOM.createRoot(document.getElementById('root1'));
-    root1.render(head);
-    8076966551
+
+//jsx is not a html syntax but it is a syntax extension to js and it is used in react to create react element
+//jsx =>React.createElement ==> ReactElement (js-object ) ==> HTMLelement (browser understand)(render)
+    const h1 = <h1>Hello World from JSX</h1>
+
+
+
+
+
+
+    //functional component
+
+
+    const TitleComponent = () => {
+        return <h1>title from Functional Component</h1>
+    }
+    const HeadingComponent = () => {
+        return <div>Hello World from Functional Component
+           {// <TitleComponent/>
+           }
+           {TitleComponent()//this is also correct but we will use it in this way
+           }
+           <TitleComponent></TitleComponent>
+
+        </div>
+    }
+    // root1.render(h1);
+
+    const elem = <div className="parent"> react element</div>
+    // root1.render(elem);
+    //react component rendering
+    root1.render(<HeadingComponent/>);
+    
