@@ -1,6 +1,15 @@
+.restaurantListBox{
+    padding: 12px;
+}
 .displayCards {
     display: flex;
     flex-wrap: wrap;
     gap: 22px;
-    justify-content: center;
+    
+}
+.searchBox{
+    display: flex;
+    margin : 20px 0px;
+   
+   gap: 10px;
 }

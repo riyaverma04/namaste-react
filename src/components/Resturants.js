@@ -2,6 +2,7 @@ import React , {useState, useEffect} from 'react'
 import { fetchRestaurants } from '../utils/api'
 import RestaurantsCard from './RestaurantsCard';
 import '../styles/restaurants.css';
+import Button from '@mui/material/Button';
 
 const data = [
                     {
@@ -266,6 +267,8 @@ const data = [
 
 const Resturants = () => {
     const [restaurants,setRestaurants] = useState(data);
+    const [searchText, setSearchText] = useState("");
+    const [filteredRestaurants, setFilteredRestaurants] = useState(data);
 
     // const getResturants = async ()=>{
     //     const data = await fetchRestaurants();
@@ -277,13 +280,27 @@ const Resturants = () => {
 //   }, []);
 
   return (
+    <div className='restaurantListBox'>
+         {/* adding restaurant filter here */}
+    <div className='searchBox'>
+        <input type="text" placeholder='search resturant..'  value={searchText} onChange={(e)=>{setSearchText(e.target.value)}}/>
+       <Button variant="outlined" onClick={()=>{
+        const filteredList = restaurants.filter((res)=>{
+           return res.info.name.toLocaleLowerCase().includes(searchText.toLocaleLowerCase());
+        })
+        setFilteredRestaurants(filteredList)
+        setSearchText("");
+       }}>Outlined</Button>
+       </div>
     <div className='displayCards'>
+      
        
         
-        {Array.isArray(restaurants) &&restaurants.map((restaurant)=>{
+        {Array.isArray(filteredRestaurants) &&filteredRestaurants.map((restaurant)=>{
             return <div key={restaurant.info.id}><RestaurantsCard restaurant={restaurant}/></div>
         })}
       
+    </div>
     </div>
   )
 }
