@@ -1,5 +1,7 @@
 import React , {useState, useEffect} from 'react'
 import { fetchRestaurants } from '../utils/api'
+import RestaurantsCard from './RestaurantsCard';
+import '../styles/restaurants.css';
 
 const data = [
                     {
@@ -273,11 +275,13 @@ const Resturants = () => {
 //     useEffect(() => {
 //     getResturants();
 //   }, []);
+
   return (
-    <div>
-        <h1>hery sfudfkjl</h1>
+    <div className='displayCards'>
+       
+        
         {Array.isArray(restaurants) &&restaurants.map((restaurant)=>{
-            return <h1 key={restaurant.info.id}>{restaurant.info.name}</h1>
+            return <div key={restaurant.info.id}><RestaurantsCard restaurant={restaurant}/></div>
         })}
       
     </div>

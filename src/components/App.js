@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './Header';
 import Body from './Body';
+import '../../index.css';
 
 //how we will create this code via js in react
 /* <div class="parent">
@@ -74,6 +75,7 @@ import Body from './Body';
         return (
             <div>
                 <Header/>
+                <div className='headerBox'></div>
                 <Body/>
 
             </div>
