@@ -54,7 +54,7 @@ export default function RestaurantsCard({ restaurant }) {
       <CardMedia
         component="img"
         height="194"
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbgrzB9RIqnl5XZzF-eOurcnqCPTlak_3CjdlUvJuMlI3Riis7121AH2g9RuPiNeZ0Gzbf2fATmbAPJh5rAx2MgH0gAZv4JonFmIleqdsVRA&s=10"
+        image={IMG_CDN + restaurant.info.cloudinaryImageId}
         alt="Food"
       />
       

@@ -266,18 +266,19 @@ const data = [
       
 
 const Resturants = () => {
-    const [restaurants,setRestaurants] = useState(data);
+    const [restaurants,setRestaurants] = useState();
     const [searchText, setSearchText] = useState("");
-    const [filteredRestaurants, setFilteredRestaurants] = useState(data);
+    const [filteredRestaurants, setFilteredRestaurants] = useState();
 
-    // const getResturants = async ()=>{
-    //     const data = await fetchRestaurants();
-    //     setRestaurants(data);
-    // }
+    const getResturants = async ()=>{
+        const data = await fetchRestaurants();
+        setRestaurants(data);
+        setFilteredRestaurants(data);
+    }
 
-//     useEffect(() => {
-//     getResturants();
-//   }, []);
+    useEffect(() => {
+    getResturants();
+  }, []);
 
   return (
     <div className='restaurantListBox'>
@@ -290,7 +291,7 @@ const Resturants = () => {
         })
         setFilteredRestaurants(filteredList)
         setSearchText("");
-       }}>Outlined</Button>
+       }}>search</Button>
        </div>
     <div className='displayCards'>
       
