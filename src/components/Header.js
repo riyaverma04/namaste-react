@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIconDropdown from '../theme/ColorModeIconDropdown';
 import SitemarkIcon from './SiteMarkIcon.js';
+import { Link } from 'react-router-dom';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -36,6 +37,7 @@ export default function AppAppBar() {
   const toggleDrawer = (newOpen) => () => {
   setOpen(newOpen);
 };
+  const linkStyle = { textDecoration: 'none', color: 'inherit' }
 
 
   return (
@@ -64,7 +66,9 @@ export default function AppAppBar() {
                offers
               </Button>
               <Button variant="text" color="info" size="small">
-               help
+                <Link to="/help" style={linkStyle}>
+                  help
+                </Link>
               </Button>
               <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
                 FAQ

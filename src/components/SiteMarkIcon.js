@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/images/logo.png";
 
 export default function SitemarkIcon() {
+  console.log("hey: ",logo)
   return (
     <div style={{ fontWeight: "bold", fontSize: "18px" }}>
       

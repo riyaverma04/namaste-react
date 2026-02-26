@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom/client';
 import Header from './Header';
 import Body from './Body';
 import '../../index.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Help from './Help';
+import Error from './Error';
+import { Outlet } from "react-router-dom";
+import Footer from './Footer';
+
 
 //how we will create this code via js in react
 /* <div class="parent">
@@ -71,20 +77,49 @@ import '../../index.css';
         //    <TitleComponent></TitleComponent>
 
         // </div>
+       
+         
+            
 
         return (
             <div>
                 <Header/>
                 <div className='headerBox'></div>
-                <Body/>
+              <Outlet/>
+              <Footer/>
 
             </div>
         )
     }
+
+
+     const appRoute = createBrowserRouter([
+            {   
+                path: "/",
+                element: <App/>,
+                errorElement :<Error/>,
+                children :[
+                    {
+                        path: "/",
+                        element: <Body/>,
+                    },
+                    {
+                        path: "/help",
+                        element: <Help/>,
+                    }
+
+                ]
+            },
+            {
+                path: "/help",
+                element: <Help/>,
+            }
+        ])
+    
     // root1.render(h1);
 
     const elem = <div className="parent"> react element</div>
     // root1.render(elem);
     //react component rendering
-    root1.render(<App/>);
+    root1.render(<RouterProvider  router = {appRoute}/>);
     
