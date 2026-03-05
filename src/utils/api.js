@@ -1,5 +1,5 @@
 import { API_BASE_URL } from "../constants/config";
-import {RES_MENU} from "../constants/config";
+
 
 export const fetchRestaurants = async ()=>{
     try{
@@ -21,30 +21,30 @@ export const fetchRestaurants = async ()=>{
 
 
 
-export const fetchRestaurantMenu = async () => {
-  try {
-    const response = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6820444&lng=77.0675607&restaurantId=239435&submitAction=ENTER"
-    );
+// export const fetchRestaurantMenu = async () => {
+//   try {
+//     const response = await fetch(
+//       "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6820444&lng=77.0675607&restaurantId=239435&submitAction=ENTER"
+//     );
 
-    // ✅ check response status
-    if (!response.ok) {
-      throw new Error("Network response not ok");
-    }
+//     // ✅ check response status
+//     if (!response.ok) {
+//       throw new Error("Network response not ok");
+//     }
 
-    // ✅ check content type
-    const contentType = response.headers.get("content-type");
+//     // ✅ check content type
+//     const contentType = response.headers.get("content-type");
 
-    if (!contentType || !contentType.includes("application/json")) {
-      throw new Error("Response is not JSON");
-    }
+//     if (!contentType || !contentType.includes("application/json")) {
+//       throw new Error("Response is not JSON");
+//     }
 
-    const json = await response.json();
-    console.log("josn", json.data)
+//     const json = await response.json();
+//     console.log("josn", json.data)
 
-    return json?.data?.cards?.[0]?.card?.card?.info || {};
-  } catch (error) {
-    console.error("Error fetching restaurant menu:", error);
-    return {};
-  }
-};
+//     return json?.data?.cards?.[0]?.card?.card?.info || {};
+//   } catch (error) {
+//     console.error("Error fetching restaurant menu:", error);
+//     return {};
+//   }
+// };
