@@ -1,7 +1,9 @@
 import React ,{useEffect} from 'react'
 import Resturants from './Resturants'
+import useOfflineStatus from '../utils/useOfflineStatus';
 
 const Body = () => {
+  const isOnline = useOfflineStatus();
   useEffect(()=>{
     console.log("use effect called");
     // const timer = setInterval(()=>{
@@ -20,11 +22,20 @@ const Body = () => {
      return "done"
   }
   console.log("render called", showConsole());
+
   return (
     <div>
       <h1>Resturants</h1>
-      {/* showing resturants her  */}
-      <Resturants/>
+      {/* showing resturants her  */
+
+       
+        
+      
+      }
+
+      {isOnline ? <Resturants/> : <h1> seems, you are offline. please check your internet connection.</h1>}
+     
+      
       
       
     </div>
