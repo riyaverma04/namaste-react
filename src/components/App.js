@@ -5,9 +5,11 @@ import Body from './Body';
 import '../../index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Help from './Help';
+import About from './About';
 import Error from './Error';
 import { Outlet } from "react-router-dom";
 import Footer from './Footer';
+import RestaurantMenuDetails from './RestaurantMenuDetails';
 
 
 //how we will create this code via js in react
@@ -106,6 +108,14 @@ import Footer from './Footer';
                     {
                         path: "/help",
                         element: <Help/>,
+                    },
+                    {
+                        path :"/about",
+                        element: <About customerName="Riya Verma"/>,
+                    },
+                    {
+                        path: "/restaurant/:resId",
+                        element: <RestaurantMenuDetails/>
                     }
 
                 ]

@@ -35,6 +35,7 @@ export default function RestaurantsCard({ restaurant }) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+  console.log(restaurant.info.name +restaurant.info.id)
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -46,6 +47,7 @@ export default function RestaurantsCard({ restaurant }) {
           </IconButton>
         }
         title={restaurant.info.name}
+       
         
         
         subheader={restaurant.info.areaName}

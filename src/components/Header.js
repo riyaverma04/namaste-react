@@ -71,7 +71,9 @@ export default function AppAppBar() {
                 </Link>
               </Button>
               <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
-                FAQ
+                <Link to="/about" style={linkStyle}>
+                About
+                </Link>
               </Button>
               <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
                 Blog
@@ -123,7 +125,9 @@ export default function AppAppBar() {
                 <MenuItem>Search</MenuItem>
                 <MenuItem>Offers</MenuItem>
                 <MenuItem>Help</MenuItem>
-                <MenuItem>FAQ</MenuItem>
+                <MenuItem> <Link to="/about" style={linkStyle}>
+                About
+                </Link></MenuItem>
                 <MenuItem>Blog</MenuItem>
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
