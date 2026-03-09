@@ -25,7 +25,7 @@ const Body = () => {
 
   return (
     <div>
-      <h1>Resturants</h1>
+      <h1 className='text-red-500 text-xl font-bold '>Resturants</h1>
       {/* showing resturants her  */
 
        

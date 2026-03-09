@@ -35,10 +35,10 @@ export default function RestaurantsCard({ restaurant }) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-  console.log(restaurant.info.name +restaurant.info.id)
+  // console.log(restaurant.info.name +restaurant.info.id)
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 , minHeight: 320, maxHeight:320 , minWidth : 300  ,padding: "10px" , cursor: "pointer" }}>
       <CardHeader
         avatar={<Avatar sx={{ bgcolor: red[500] }}><LocationOnIcon/></Avatar>}
         action={
@@ -58,11 +58,16 @@ export default function RestaurantsCard({ restaurant }) {
         height="194"
         image={IMG_CDN + restaurant.info.cloudinaryImageId}
         alt="Food"
+        sx={{maxHeight: 150}}
       />
       
 
-      <CardContent>
-        <Typography variant="body2" >
+      <CardContent sx={{width: 342,
+    }}>
+        <Typography variant="body2"  sx={{whiteSpace: "nowrap",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    width: 300}} >
           {restaurant.info.cuisines.join(", ")}
         </Typography>
       </CardContent>
@@ -91,4 +96,24 @@ export default function RestaurantsCard({ restaurant }) {
       </Collapse> */}
     </Card>
   );
+}
+
+
+
+
+//higher order component
+export const withPromotedLabel = (RestaurantsCard)=>{
+  return (props)=>{
+    return (
+      <div className="relative">
+        <label className="capitalize absolute rounded-md bg-red-500 text-white px-2 z-10">promoted</label>
+        
+ 
+
+
+        <RestaurantsCard {...props}/>
+        
+      </div>
+    )
+  }
 }
