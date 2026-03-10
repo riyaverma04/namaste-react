@@ -38,7 +38,7 @@ export default function RestaurantsCard({ restaurant }) {
   // console.log(restaurant.info.name +restaurant.info.id)
 
   return (
-    <Card sx={{ maxWidth: 345 , minHeight: 320, maxHeight:320 , minWidth : 300  ,padding: "10px" , cursor: "pointer" }}>
+    <Card sx={{ maxWidth: 345 , minHeight: 320, maxHeight:320 , minWidth : 300  ,padding: "10px" , cursor: "pointer" }} >
       <CardHeader
         avatar={<Avatar sx={{ bgcolor: red[500] }}><LocationOnIcon/></Avatar>}
         action={

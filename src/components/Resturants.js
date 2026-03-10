@@ -3,6 +3,8 @@ import { fetchRestaurants } from '../utils/api'
 import RestaurantsCard ,{withPromotedLabel} from './RestaurantsCard';
 import '../styles/restaurants.css';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 
 // const data = [
@@ -301,11 +303,14 @@ const Resturants = () => {
        
         
         {Array.isArray(filteredRestaurants) &&filteredRestaurants.map((restaurant)=>{
-            return <div key={restaurant.info.id} className="flex justify-center items-center m-auto">
+            return (
+            <div key={restaurant.info.id} className="flex justify-center items-center m-auto">
               {restaurant.info.promoted ? <PromotedRestaurantsCard restaurant={restaurant}/> :
-              
+              //<Link to={`/restaurant/${restaurant.info.id}`} style={{ textDecoration: 'none' , color: "inherit"}}>  
+              <Link to={`/restaurant/${restaurant.info.id}`} >
               <RestaurantsCard restaurant={restaurant}/>
-              }</div>
+             </Link>
+              }</div>)
         })}
       
     </div>
