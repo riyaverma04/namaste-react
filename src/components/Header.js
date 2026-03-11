@@ -14,6 +14,7 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIconDropdown from '../theme/ColorModeIconDropdown';
 import SitemarkIcon from './SiteMarkIcon.js';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -37,7 +38,10 @@ export default function AppAppBar() {
   const toggleDrawer = (newOpen) => () => {
   setOpen(newOpen);
 };
-  const linkStyle = { textDecoration: 'none', color: 'inherit' }
+  const linkStyle = { textDecoration: 'none', color: 'inherit' };
+
+  //subscribing to the store to read the data from the store
+  const cartItems = useSelector((store)=> store.cart.items)
 
 
   return (
@@ -76,7 +80,7 @@ export default function AppAppBar() {
                 </Link>
               </Button>
               <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
-                Blog
+               cart {cartItems.length > 0 && `(${cartItems.length})`}
               </Button>
             </Box>
           </Box>

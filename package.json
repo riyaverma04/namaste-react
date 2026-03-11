@@ -22,12 +22,14 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.8",
     "@mui/material": "^7.3.9",
+    "@reduxjs/toolkit": "^2.11.2",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "mui": "^0.0.1",
     "node-fetch": "^3.3.2",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^6.30.3"
   },
   "devDependencies": {

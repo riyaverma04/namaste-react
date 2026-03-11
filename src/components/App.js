@@ -10,6 +10,8 @@ import Error from './Error';
 import { Outlet } from "react-router-dom";
 import Footer from './Footer';
 import RestaurantMenuDetails from './RestaurantMenuDetails';
+import { Provider } from 'react-redux';
+import appStore from '../utils/appStore';
 
 
 //how we will create this code via js in react
@@ -84,13 +86,13 @@ import RestaurantMenuDetails from './RestaurantMenuDetails';
             
 
         return (
-            <div>
+            <Provider store={appStore}>
                 <Header/>
                 <div className='headerBox'></div>
               <Outlet/>
               <Footer/>
 
-            </div>
+            </Provider>
         )
     }
 
