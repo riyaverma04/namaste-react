@@ -1,8 +1,18 @@
 import React from "react";
 import { IMG_CDN } from "../constants/config";
 import Rating from "./Rating";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 const RestaurantMenuDetailsAccordianItemList = ({accordianItemListArray})=>{
     console.log("accordian item list array", accordianItemListArray);
+
+    const dispatch = useDispatch();
+
+    const handleCartItems = (itemName)=>{
+        console.log("item name", itemName);
+        dispatch(addItem(itemName))
+
+    }
     
     return (
         <div>
@@ -23,10 +33,11 @@ const RestaurantMenuDetailsAccordianItemList = ({accordianItemListArray})=>{
                         <p className="truncate text-gray-600">{info?.description}</p>
                         
                         </div>
-                        <div className="w-4/12">
+                        <div className="w-4/12 relative">
                             <img  src={IMG_CDN + info.imageId}
                             className="rounded-lg w-full h-full object-cover"
                             />
+                            <button className="py-2 text-white px-8 font-bold bg-yellow-500 rounded-lg shadow-md absolute top-0" onClick={()=>handleCartItems(info?.name)}>Add</button>
                         </div>
 
 
