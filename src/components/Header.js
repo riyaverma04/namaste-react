@@ -80,7 +80,9 @@ export default function AppAppBar() {
                 </Link>
               </Button>
               <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
+               <Link to="/cart" style={linkStyle}> 
                cart {cartItems.length > 0 && `(${cartItems.length})`}
+              </Link>
               </Button>
             </Box>
           </Box>

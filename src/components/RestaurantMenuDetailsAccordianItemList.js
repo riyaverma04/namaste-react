@@ -8,9 +8,9 @@ const RestaurantMenuDetailsAccordianItemList = ({accordianItemListArray})=>{
 
     const dispatch = useDispatch();
 
-    const handleCartItems = (itemName)=>{
-        console.log("item name", itemName);
-        dispatch(addItem(itemName))
+    const handleCartItems = (itemInfo)=>{
+        console.log("item Info", itemInfo);
+        dispatch(addItem(itemInfo))
 
     }
     
@@ -37,7 +37,7 @@ const RestaurantMenuDetailsAccordianItemList = ({accordianItemListArray})=>{
                             <img  src={IMG_CDN + info.imageId}
                             className="rounded-lg w-full h-full object-cover"
                             />
-                            <button className="py-2 text-white px-8 font-bold bg-yellow-500 rounded-lg shadow-md absolute top-0" onClick={()=>handleCartItems(info?.name)}>Add</button>
+                            <button className="py-2 text-white px-8 font-bold bg-yellow-500 rounded-lg shadow-md absolute top-0" onClick={()=>handleCartItems(info)}>Add</button>
                         </div>
 
 

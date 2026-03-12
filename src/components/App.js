@@ -12,6 +12,7 @@ import Footer from './Footer';
 import RestaurantMenuDetails from './RestaurantMenuDetails';
 import { Provider } from 'react-redux';
 import appStore from '../utils/appStore';
+import Cart from './Cart';
 
 
 //how we will create this code via js in react
@@ -114,6 +115,10 @@ import appStore from '../utils/appStore';
                     {
                         path :"/about",
                         element: <About customerName="Riya Verma"/>,
+                    },
+                    {
+                        path: "/cart",
+                        element: <Cart/>,
                     },
                     {
                         path: "/restaurant/:resId",
