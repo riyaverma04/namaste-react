@@ -1,0 +1,97 @@
+{
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+    "info": {
+        "id": "624614",
+        "name": "The Bake Brothers",
+        "cloudinaryImageId": "hn6oostkusfkbspenpxk",
+        "locality": "Narayana Vihar",
+        "areaName": "Punjabi Bagh",
+        "costForTwo": "₹400 for two",
+        "cuisines": [
+            "Chinese",
+            "Snacks",
+            "Fast Food"
+        ],
+        "avgRating": 4.1,
+        "parentId": "204877",
+        "avgRatingString": "4.1",
+        "totalRatingsString": "143",
+        "promoted": true,
+        "adTrackingId": "cid=3b64867e-e2f0-4946-b957-395adc4ed0a9~p=0~adgrpid=3b64867e-e2f0-4946-b957-395adc4ed0a9#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=624614~plpr=COLLECTION~eid=5f51e4e5-4844-499a-8aaa-6d4853a7a9cc~srvts=1773416156134~collid=147970",
+        "sla": {
+            "deliveryTime": 45,
+            "lastMileTravel": 5.9,
+            "serviceability": "SERVICEABLE",
+            "slaString": "40-45 mins",
+            "lastMileTravelString": "5.9 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2026-03-13 23:15:00",
+            "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "aggregatedDiscountInfoV2": {
+            "header": "₹200 OFF",
+            "shortDescriptionList": [
+                {
+                    "discountType": "FinalPrice",
+                    "operationType": "RESTAURANT"
+                }
+            ],
+            "descriptionList": [
+                {
+                    "meta": "99 store",
+                    "discountType": "FinalPrice",
+                    "operationType": "RESTAURANT"
+                },
+                {
+                    "meta": "99 store",
+                    "discountType": "FinalPrice",
+                    "operationType": "RESTAURANT"
+                }
+            ]
+        },
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+        "context": "seo-data-b9853764-c942-4553-a87e-17e20b6cb369"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/city/delhi/the-bake-brothers-narayana-vihar-punjabi-bagh-rest624614",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_byName"
+}

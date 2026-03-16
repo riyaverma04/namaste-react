@@ -6,10 +6,21 @@ import RestaurantMenuDetailsAccordianItemList from './RestaurantMenuDetailsAccor
 const RestaurantMenuDetailsAccordian=({restaurantMenu})=>{
 //    const restaurentMenu = useFetchRestaurantMenu();
 //     console.log("accordian data", restaurentMenu);
-   const accordianDataArray = restaurantMenu.data?.cards?.[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((card)=>{
-    return card?.card?.card?.itemCards ;
+//    const accordianDataArray = restaurantMenu.data?.cards?.[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((card)=>{
+//     return card?.card?.card?.itemCards ;
 
-   })
+   //})
+
+
+   const groupedCard = restaurantMenu?.data?.cards?.find(
+  (c) => c?.groupedCard
+);
+
+const accordianDataArray =
+  groupedCard?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+    (card) => card?.card?.card?.itemCards
+  ) || [];
+
    const [openIndex, setOpenIndex] = useState(null);
    const handleArrowClick = (index)=>{
     
@@ -29,7 +40,7 @@ const RestaurantMenuDetailsAccordian=({restaurantMenu})=>{
                     const isOpen = openIndex === index;
                     return (
                       <div key={index} >
-                          <div className="border-solid border-gray-400 shadow-md p-3 mt-5 flex justify-between items-center" 
+                          <div className="border-solid border-gray-400 shadow-md p-3 mt-5 flex justify-between items-center" data-resid="accordianExpand"
                            
                           onClick={()=>handleArrowClick(index)}
                         >

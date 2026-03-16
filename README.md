@@ -31,4 +31,12 @@
    - config the parcelrc
    - jest : - npx jest --init
    - install jsdom library (npm install --save-dev jest-environment-jsdom)
+   - make the folder within component __test__ and there will the file of test
+   - file name :- nameOfTheFile.test.js
+   
+    (to rendering the component in test file we need to install these dependencies),
+   - install "@babel/preset-react" :- npm i "@babel/preset-react"
+   - config the babel  ["@babel/preset-react", {runtime: "automatic"}]
+   - install @testing-library/jest-dom (for expecting more options)
+   -
 

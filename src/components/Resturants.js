@@ -304,7 +304,7 @@ const Resturants = () => {
         
         {Array.isArray(filteredRestaurants) &&filteredRestaurants.map((restaurant)=>{
             return (
-            <div key={restaurant.info.id} className="flex justify-center items-center m-auto">
+            <div key={restaurant.info.id} data-testid="resCard" className="flex justify-center items-center m-auto">
               {restaurant.info.promoted ? <PromotedRestaurantsCard restaurant={restaurant}/> :
               //<Link to={`/restaurant/${restaurant.info.id}`} style={{ textDecoration: 'none' , color: "inherit"}}>  
               <Link to={`/restaurant/${restaurant.info.id}`} >

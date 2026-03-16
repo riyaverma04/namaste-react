@@ -195,6 +195,15 @@ const config = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+   moduleNameMapper: {
+    "\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/__mocks__/fileMock.js",
+     "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+  },
+
+  transform: {
+    "^.+\\.[jt]sx?$": "babel-jest",
+  },
+  
 };
 
 module.exports = config;
